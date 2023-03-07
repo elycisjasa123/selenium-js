@@ -20,4 +20,5 @@ Selenium WebDriver is a W3C Recommendation
 ### Run Selenium sample test
 
 - `npm install` to install all the dependencies
-- `npx mocha ./mocha_frameworks/Mouse_Interactions.js` to run the example test executions
+- `npm install -g mocha` to install the mochajs frameworks
+- `npx mocha ./mocha_frameworks/Login.js` to run the example test executions

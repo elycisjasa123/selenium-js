@@ -15,7 +15,7 @@ Selenium WebDriver is a W3C Recommendation
 
 - WebDriver is a compact object-oriented API.
 
-- It drives the browser effectively.
+- It drives the browser effectively
 
 ### Run Selenium sample test
 

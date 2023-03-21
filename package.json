@@ -4,13 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "selenium:mocha": "npx mocha ./mocha_frameworks/Swagger/"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "chai-http": "^4.3.0",
     "mocha": "^10.2.0",
     "selenium-webdriver": "^4.8.1"
+  },
+  "devDependencies": {
+    "chai": "^4.3.7"
   }
 }

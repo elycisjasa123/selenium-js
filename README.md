@@ -21,4 +21,4 @@ Selenium WebDriver is a W3C Recommendation
 
 - `npm install` to install all the dependencies
 - `npm install -g mocha` to install the mochajs frameworks
-- `npx mocha ./mocha_frameworks/Login.js` to run the example test executions
+- `npm run selenium:mocha` to run the example test executions

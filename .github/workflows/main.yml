@@ -9,9 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: |
-          actions/checkout@v2
-          browser-actions/setup-chrome@v1
+        uses: actions/checkout@v2
         with:
           ref: master # checkout code only from the 'master' branch
       - name: Use the browser action chrome...
@@ -23,5 +21,4 @@ jobs:
       - name: Install selenium webdriver...
         run: npm install selenium-webdriver
       - name: Run the swagger test...
-        uses: browser-actions/setup-chrome@v1
         run: npm run selenium:mocha

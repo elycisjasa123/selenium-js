@@ -10,7 +10,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-        uses: browser-actions/setup-chrome@v1
         with:
           ref: master # checkout code only from the 'master' branch
       - name: Install the dependencies...
@@ -20,4 +19,5 @@ jobs:
       - name: Install selenium webdriver...
         run: npm install selenium-webdriver
       - name: Run the swagger test...
+        uses: browser-actions/setup-chrome@v1
         run: npm run selenium:mocha

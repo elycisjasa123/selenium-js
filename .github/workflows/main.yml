@@ -1,0 +1,21 @@
+name: Selenium tests
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 5 * * 1-5' # run every weekdays 5am
+    branches:
+      - master # only run in the 'master' branch only
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          ref: master # checkout code only from the 'master' branch
+      - name: Install the dependencies...
+        run: npm install
+      - name: Install mocha js dependencies...
+        run: npm install -g mocha
+      - name: Run the swagger test...
+        run: npm run selenium:mocha

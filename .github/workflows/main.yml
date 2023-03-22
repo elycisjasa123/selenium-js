@@ -9,7 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: |
+          actions/checkout@v2
+          browser-actions/setup-chrome@v1
         with:
           ref: master # checkout code only from the 'master' branch
       - name: Install the dependencies...

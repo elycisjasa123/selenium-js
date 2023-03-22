@@ -6,18 +6,12 @@ on:
 
 jobs:
   swagger_selenium:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted1
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
         with:
           ref: master # checkout code only from the 'master' branch
-      - name: Install Chrome
-        run: |
-          wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-          echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list
-          sudo apt-get update
-          sudo apt-get install -y google-chrome-stable
       - name: Install the dependencies...
         run: npm install
       - name: Install mocha js dependencies...

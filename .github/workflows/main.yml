@@ -7,7 +7,7 @@ on:
   #     - master # only run in the 'master' branch only
 jobs:
   swagger_selenium:
-    runs-on: 'jasasane'
+    runs-on: self-hosted
     steps:
       - name: Checkout code
         uses: actions/checkout@v2

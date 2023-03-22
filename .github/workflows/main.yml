@@ -5,7 +5,7 @@ on:
     - cron: '0 5 * * 1-5' # run every weekdays 5am
 
 jobs:
-  swagger_selenium:
+  swag_lab_test_site_selenium-js:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -18,5 +18,5 @@ jobs:
         run: npm install -g mocha
       - name: Install selenium webdriver...
         run: npm install selenium-webdriver
-      - name: Run the swagger test...
+      - name: Run the swag lab web page test...
         run: npm run selenium:mocha

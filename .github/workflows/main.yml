@@ -1,13 +1,14 @@
 name: Selenium tests
 on:
   workflow_dispatch:
-  # schedule:
-  #   - cron: '0 5 * * 1-5' # run every weekdays 5am
-  #   branches:
-  #     - master # only run in the 'master' branch only
+  schedule:
+    - cron: '0 5 * * 1-5' # run every weekdays 5am
+  branches:
+    - master # only run in the 'master' branch only
+
 jobs:
   swagger_selenium:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2

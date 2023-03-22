@@ -13,8 +13,7 @@ jobs:
         with:
           ref: master # checkout code only from the 'master' branch
       - name: Install chrome stable...
-        run: sudo apt-get update
-        run: sudo apt-get install google-chrome-stable
+        run: sudo apt-get update && sudo apt-get install google-chrome-stable
       - name: Install the dependencies...
         run: npm install
       - name: Install mocha js dependencies...

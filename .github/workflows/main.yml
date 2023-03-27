@@ -2,11 +2,14 @@ name: Selenium tests
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 5 * * 1-5' # run every weekdays 5am
+    - cron: "0 5 * * 1-5" # run every weekdays 5am
 
 jobs:
   swag_lab_test_site_selenium-js:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16.x, 14.x, 12.x]
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
